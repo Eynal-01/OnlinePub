@@ -10,7 +10,10 @@ namespace OnlinePub.Models
     public class Beer : Entity
     {
         public string Name { get; set; }
-        public double Volume { get; set; }
-        public double BeerCost { get; set; }
+        public decimal BeerCost { get; set; }
+        public decimal Volume { get; set; }
+        public decimal BeerCount { get; set; }
+        public decimal TotalPrice { get; set; }
+        public string ImagePath { get; set; }
     }
 }

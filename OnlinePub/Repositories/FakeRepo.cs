@@ -13,9 +13,9 @@ namespace OnlinePub.Repositories
         {
             return new List<Beer>
             {
-                new Beer{Id=1, Name="Corona", Volume=3.5, BeerCost=20},
-                new Beer{Id=2, Name="Heineken", Volume=2.0, BeerCost=35},
-                new Beer{Id=3, Name="Budweiser", Volume=2.5, BeerCost=40}
+                new Beer{Id=1, Name="Corona", Volume=3.5m, BeerCost=20, ImagePath="/Images/corona.png"},
+                new Beer{Id=2, Name="Heineken", Volume=2.0m, BeerCost=35, ImagePath="/Images/heineken.png"},
+                new Beer{Id=3, Name="Budweiser", Volume=2.5m, BeerCost=40, ImagePath="/Images/budweiser.png"}
             };
         }
     }
