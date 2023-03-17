@@ -9,7 +9,7 @@ namespace OnlinePub.Models
 {
     public class Beer : Entity
     {
-        public string Name { get; set; }
+        public string BeerName { get; set; }
         public decimal BeerCost { get; set; }
         public decimal Volume { get; set; }
         public decimal BeerCount { get; set; }

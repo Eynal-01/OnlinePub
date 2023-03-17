@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OnlinePub
+namespace OnlinePub.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

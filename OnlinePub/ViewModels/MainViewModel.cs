@@ -22,7 +22,7 @@ namespace OnlinePub.ViewModels
 		{
 			get { return allBeers; }
 			set { allBeers = value; OnPropertyChanged(); }
-		}
+		} 
 		private Beer beer;
 
 		public Beer Beer
