@@ -117,13 +117,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\corona.png" />
+    <Resource Include="Images\budlight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\heineken.png" />
+    <Resource Include="Images\skol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coronaextra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coronalight.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\budweiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\heineken1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\beach1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

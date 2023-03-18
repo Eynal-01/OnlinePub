@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Images\beach1.png"></ImageBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="7*"/>
@@ -22,42 +25,36 @@
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </ComboBox>
-        <Grid Grid.Row="1">
+        <Grid Margin="0,0,25,0" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Label Height="60" Grid.Row="1" Grid.Column="1" FontSize="26" Margin="0,0,0,220">Name</Label>
-            <TextBlock  Text="{Binding Beer.BeerName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Width="200" Height="50" FontSize="15" FontWeight="DemiBold" Margin="113,15,57,242"/>
-            <Label Height="60" Grid.Row="1" Grid.Column="1" FontSize="26" Margin="0,0,0,90">Price</Label>
-            <TextBlock Text="{Binding Beer.BeerCost,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Width="150" Height="50" FontSize="18" FontWeight="DemiBold" Margin="114,82,56,177"/>
-            <Label Height="60" Grid.Row="1" Grid.Column="1" FontSize="26" Margin="0,40,0,0">Volume</Label>
-            <TextBlock  Text="{Binding Beer.Volume,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Width="150" Height="50" FontSize="18" FontWeight="DemiBold" Margin="115,148,55,112"/>
+            <Label Height="60" Grid.Row="1" Grid.Column="1" FontStyle="Italic" FontSize="26" Margin="0,0,0,220">Name :</Label>
+            <TextBlock  Text="{Binding Beer.BeerName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" FontStyle="Italic" Height="50" FontSize="26" FontWeight="DemiBold" Margin="113,10,-15,244"/>
+            <Label Height="60" Grid.Row="1" Grid.Column="1" FontStyle="Italic" FontSize="26" Margin="0,0,0,90">Price :</Label>
+            <TextBlock Text="{Binding Beer.BeerCost,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" FontStyle="Italic" Width="150" Height="50" FontSize="26" FontWeight="DemiBold" Margin="100,73,56,177"/>
+            <Label Height="60" Grid.Row="1" Grid.Column="1" FontStyle="Italic" FontSize="26" Margin="0,40,0,0">Volume :</Label>
+            <TextBlock  Text="{Binding Beer.Volume,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Width="150" Height="50" FontSize="26" FontStyle="Italic" FontWeight="DemiBold" Margin="135,140,55,112"/>
             <Image Width="400" Height="240" Source="{Binding Beer.ImagePath,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" ></Image>
-            <Button Command="{Binding AddCommand}" BorderThickness="0" Name="addBtn" Grid.Column="1" Margin="0,200,100,0" Width="50" Height="50">
+            <Button Background="Transparent" Padding="0,0,0,10" FontSize="30" Content="-" Command="{Binding RemoveCommand}" BorderThickness="0" Name="removeBtn" Grid.Column="1" Margin="0,200,100,0" Width="50" Height="50">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="50"></Setter>
                     </Style>
                 </Button.Resources>
-                <!--<Button.Background>
-                    <ImageBrush ImageSource="/images/add.png" ></ImageBrush>
-                </Button.Background>-->
             </Button>
-            <TextBlock FontSize="18" TextAlignment="Center" Text="{Binding Count}" Name="addTxtBlock" Grid.Column="1" Margin="131,233,139,21" Width="50" Height="50"></TextBlock>
-            <Button Command="{Binding RemoveCommand}" BorderThickness="0" Name="removeBtn" Grid.Column="1" Margin="100,200,0,0" Width="50" Height="50">
+            <TextBlock FontSize="18" TextAlignment="Center" Text="{Binding Count}" Name="addTxtBlock" Grid.Column="1" Margin="128,230,139,21" Width="50" Height="50"></TextBlock>
+            <Button Background="Transparent" Padding="0,0,0,10" FontSize="30" Content="+" Command="{Binding AddCommand}" BorderThickness="0" Name="addBtn" Grid.Column="1" Margin="100,200,0,0" Width="50" Height="50">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="50"></Setter>
                     </Style>
                 </Button.Resources>
-                <!--<Button.Background>
-                    <ImageBrush ImageSource="/images/remove.png" ></ImageBrush>
-                </Button.Background>-->
             </Button>
         </Grid>
-        <Button Background="White" Command="{Binding BuyCommand}" Name="buyBtn" Grid.Row="2" Width="150" Height="50" Margin="0,0,550,0" FontSize="30" FontWeight="DemiBold">BUY</Button>
-        <Button Background="White" Command="{Binding ResetCommand}" Name="resetBtn" Grid.Row="2" Width="150" Height="50" FontSize="30" FontWeight="DemiBold">Reset</Button>
-        <Button Background="White" Command="{Binding ShowCommand}" Name="showHistoryBtn" Grid.Row="2" Width="150" Height="50" Margin="550,0,0,0" FontSize="24" FontWeight="DemiBold">Show History</Button>
+        <Button BorderThickness="0" FontStyle="Italic" Background="Transparent" Command="{Binding BuyCommand}" Name="buyBtn" Grid.Row="2" Width="150" Height="50" Margin="0,0,550,0" FontSize="30" FontWeight="DemiBold">Buy</Button>
+        <Button BorderThickness="0" FontStyle="Italic" Background="Transparent" Command="{Binding ResetCommand}" Name="resetBtn" Grid.Row="2" Width="150" Height="50" FontSize="30" FontWeight="DemiBold">Reset</Button>
+        <Button BorderThickness="0" FontStyle="Italic" Background="Transparent" Command="{Binding ShowCommand}" Name="showHistoryBtn" Grid.Row="2" Width="150" Height="50" Margin="550,0,0,0" FontSize="24" FontWeight="DemiBold">Show History</Button>
     </Grid>
 </Window>

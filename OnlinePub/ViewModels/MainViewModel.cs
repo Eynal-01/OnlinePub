@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -56,6 +56,7 @@ namespace OnlinePub.ViewModels
             BeerRepository = new FakeRepo();
             AllBeers = new ObservableCollection<Beer>(BeerRepository.GetAll());
             Beer = new Beer();
+            
             Purchased = new ObservableCollection<Beer>();
             SelectedCommand = new RelayCommand((obj) =>
             {
